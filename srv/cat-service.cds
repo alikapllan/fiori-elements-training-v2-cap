@@ -48,13 +48,41 @@ annotate CatalogService.Products with @(
                 },
             ]
         },
+        FieldGroup #DetailFG : {
+            $Type: 'UI.FieldGroupType',
+            Label: 'Overview',
+            Data: [
+                {
+                    $Type: 'UI.DataField',
+                    Value: productName
+                },
+                {
+                    $Type: 'UI.DataField',
+                    Value: price
+                },
+            ]
+        },
         // linking field group to UI
         Facets : [
             {
-                $Type: 'UI.ReferenceFacet', // 3 Facet types avaliable UI.CollectionFacet, UI.ReferenceURLFacet
-                Label: 'Overview',
-                Target: '@UI.FieldGroup#OverviewFG' // points to our new Field Group above
-            }
+                // bundling 2 Facets under 1. If separeted then we would have 2 sections
+                $Type: 'UI.CollectionFacet', // You can generate nested collection facets
+                Label: 'Information',
+                ID: 'CollectionFacet1',
+                Facets: [
+                    {
+                        $Type: 'UI.ReferenceFacet', // 3 Facet types avaliable UI.CollectionFacet, UI.ReferenceURLFacet
+                        Label: 'Overview',
+                        Target: '@UI.FieldGroup#OverviewFG' // points to our new Field Group above
+                    },
+                    {
+                        $Type: 'UI.ReferenceFacet', 
+                        Label: 'More Details',
+                        Target: '@UI.FieldGroup#DetailFG' 
+                    },
+                ]
+            },
+            
         ],
     }
 );

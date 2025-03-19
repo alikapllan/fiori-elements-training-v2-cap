@@ -1,0 +1,4 @@
+ID;productName;category;price;description;image
+"e3b0c442-98fc-1c14-9fb0-c4e9b3c77c63";"Laptop";"Electronics";999.99;"High-performance laptop for professionals";"https://i.ibb.co/WWfNSgp/openui5.png"
+"fe3a9ec0-93d6-2f3b-ad7c-c8f330b7606c";"Smartphone";"Electronics";599.99;"Latest model with advanced features";"https://i.ibb.co/WWfNSgp/openui5.png"
+"b4e9b3c7-7c63-4e3b-0c44-29fc1c149fb0";"Coffee Maker";"Home Appliances";49.99;"Brews perfect coffee every time";"https://i.ibb.co/WWfNSgp/openui5.png"

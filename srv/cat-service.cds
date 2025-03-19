@@ -18,6 +18,23 @@ annotate CatalogService.Products with @(
                 Value: price 
             },
         ],
+        HeaderInfo  : {
+            $Type: 'UI.HeaderInfoType',
+            TypeName: 'Product',
+            TypeNamePlural: 'Products',
+            TypeImageUrl: image,
+            // appears when navigated to the product details view
+            Title : {
+                $Type: 'UI.DataField', // specifies that the data will be binded from Products
+                Value: productName,
+                // Label: 'Product'
+            },
+            Description: {
+                $Type: 'UI.DataField',
+                Value: price
+            }
+        },
+        
     }
 );
 

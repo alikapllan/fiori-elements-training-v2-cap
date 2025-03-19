@@ -34,7 +34,28 @@ annotate CatalogService.Products with @(
                 Value: price
             }
         },
-        
+        FieldGroup #OverviewFG : {
+            $Type: 'UI.FieldGroupType',
+            Label: 'Overview',
+            Data: [
+                {
+                    $Type: 'UI.DataField',
+                    Value: category
+                },
+                {
+                    $Type: 'UI.DataField',
+                    Value: description
+                },
+            ]
+        },
+        // linking field group to UI
+        Facets : [
+            {
+                $Type: 'UI.ReferenceFacet', // 3 Facet types avaliable UI.CollectionFacet, UI.ReferenceURLFacet
+                Label: 'Overview',
+                Target: '@UI.FieldGroup#OverviewFG' // points to our new Field Group above
+            }
+        ],
     }
 );
 

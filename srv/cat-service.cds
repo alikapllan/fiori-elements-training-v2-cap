@@ -90,13 +90,14 @@ annotate CatalogService.Products with @(
                     },
                     {
                         $Type: 'UI.CollectionFacet', 
-                        Label: 'Detail',
+                        Label: 'Supplier',
                         ID: 'CollectionFacet3',
                         Facets: [
                                 {
                                     $Type: 'UI.ReferenceFacet', 
-                                    Label: 'More Details',
-                                    Target: '@UI.FieldGroup#DetailFG' 
+                                    Label: 'Supplier Details',
+                                    //Target: '@UI.FieldGroup#DetailFG' 
+                                    Target: '_supplier/@UI.FieldGroup#SupplierFG' // it is how you link it via association
                                 }
                             ]
                     },
@@ -106,6 +107,26 @@ annotate CatalogService.Products with @(
         ],
     }
 );
+
+annotate CatalogService.Supplier with @(
+    UI: {
+        FieldGroup #SupplierFG : {
+            $Type: 'UI.FieldGroupType',
+            Label: 'Supplier Details',
+            Data: [
+                {
+                    $Type: 'UI.DataField',
+                    Value: name
+                },
+                {
+                    $Type: 'UI.DataField',
+                    Value: country
+                },
+            ]
+        },
+    }
+);
+
 
 service CatalogService {
     // @readonly entity Books as projection on my.Books;

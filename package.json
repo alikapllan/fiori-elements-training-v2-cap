@@ -15,9 +15,11 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-list-report-page-cap": "cds watch --open list-report-page-cap/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-list-report-page-cap": "cds watch --open list-report-page-cap/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-sample_cap_for_fiori_elements_2": "cds watch --open sample_cap_for_fiori_elements_2/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
-    "app/list-report-page-cap"
+    "app/list-report-page-cap",
+    "app/sample_cap_for_fiori_elements_2"
   ]
 }

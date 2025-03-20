@@ -110,6 +110,25 @@ annotate CatalogService.Products with @(
 
 annotate CatalogService.Supplier with @(
     UI: {
+        LineItem  : [
+            { 
+                Label: 'Supplier Name',
+                Value: name 
+            },
+            { 
+                Label: 'Country',
+                Value: country 
+            }
+        ],
+        HeaderInfo  : {
+            $Type: 'UI.HeaderInfoType',
+            TypeName: 'Supplier',
+            TypeNamePlural: 'Suppliers',
+            Title : {
+                $Type: 'UI.DataField',
+                Value: name,
+            }
+        },
         FieldGroup #SupplierFG : {
             $Type: 'UI.FieldGroupType',
             Label: 'Supplier Details',
@@ -124,6 +143,18 @@ annotate CatalogService.Supplier with @(
                 },
             ]
         },
+        Facets : [
+            {
+                $Type: 'UI.ReferenceFacet', 
+                Label: 'Overview',
+                Target: '@UI.FieldGroup#SupplierFG' 
+            },
+            {
+                $Type: 'UI.ReferenceFacet', 
+                Label: 'Products',
+                Target: 'suppliedProducts/@UI.LineItem' // with this we achieve the linking from suppliers to products -> 1 to n
+            }
+        ],
     }
 );
 

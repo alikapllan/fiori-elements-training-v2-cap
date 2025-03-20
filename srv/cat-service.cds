@@ -110,4 +110,5 @@ annotate CatalogService.Products with @(
 service CatalogService {
     // @readonly entity Books as projection on my.Books;
     @readonly entity Products as projection on sampleCAPProject.Products;
+    @readonly entity Supplier as projection on sampleCAPProject.Supplier;
 }

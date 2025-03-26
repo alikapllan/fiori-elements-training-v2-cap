@@ -26,3 +26,16 @@ File or Folder | Purpose
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
 >>>>>>> 7b175be (first commit - create schema.cds / bind it to service cat-service.cds / some sample data in sampleCAPProject-Products.csv)
+
+## Outputs of apps 
+
+### List Report v1 - Products 
+![image](https://github.com/user-attachments/assets/411df609-de0a-4afa-b68f-511d565af874)  
+
+![image](https://github.com/user-attachments/assets/9fa0ca40-83d8-4bff-bb91-9faa6692e333)
+
+### List Report v2 - Supplier (Association to many Products)
+![image](https://github.com/user-attachments/assets/0cb096a5-4ee4-4e2c-8d3a-91b821dda674)  
+
+![image](https://github.com/user-attachments/assets/a6178598-a482-4e2b-8549-add652757ba9)
+
